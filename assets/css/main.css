@@ -2456,8 +2456,8 @@ td, th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../font/glyphicons-halflings-regular.eot');
-  src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../font/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 .glyphicon {
@@ -9080,12 +9080,12 @@ footer .row {
 
 @font-face {
   font-family: "GothamRnd-Book";
-  src: url(../font/GothamRnd-Book.otf);
+  src: url(../fonts/GothamRnd-Book.otf);
 }
 
 @font-face {
   font-family: "GothamRnd-Medium";
-  src: url(../font/GothamRnd-Medium.otf);
+  src: url(../fonts/GothamRnd-Medium.otf);
 }
 
 /*# sourceMappingURL=main.css.map */
