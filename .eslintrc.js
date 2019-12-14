@@ -17,9 +17,9 @@ module.exports = {
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "plugin:prettier/recommended",
     "prettier"
   ],
-  plugins: ["import"],
   overrides: [
     {
       files: ["src/**/*.js"],
@@ -33,7 +33,7 @@ module.exports = {
         }
       },
       extends: ["plugin:react/recommended", "plugin:jsx-a11y/strict"],
-      plugins: ["react", "react-hooks", "graphql", "jsx-a11y"],
+      plugins: ["react-hooks"],
       rules: {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
