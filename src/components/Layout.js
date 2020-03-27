@@ -1,8 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
-
-import SEO from "./SEO";
 
 export default function Layout({ children }) {
   const styles = createUseStyles({
@@ -22,12 +20,7 @@ export default function Layout({ children }) {
     }
   })();
 
-  return (
-    <Fragment>
-      <SEO />
-      <div className={styles.container}>{children}</div>
-    </Fragment>
-  );
+  return <div className={styles.container}>{children}</div>;
 }
 
 Layout.propTypes = {

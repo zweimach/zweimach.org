@@ -1,6 +1,7 @@
 dependencies:
   gatsby: 2.20.7_04c16baeea6b4a2704e625785aa0c1b4
   gatsby-plugin-jss: 2.2.1_gatsby@2.20.7
+  gatsby-plugin-manifest: 2.3.3_gatsby@2.20.7
   gatsby-plugin-react-helmet: 3.2.1_gatsby@2.20.7+react-helmet@5.2.1
   gatsby-plugin-sharp: 2.5.3_gatsby@2.20.7
   gatsby-plugin-typography: 2.4.1_da68d70c4ad42ba090edb7a6c594624d
@@ -5716,6 +5717,20 @@ packages:
       gatsby: ^2.0.32
     resolution:
       integrity: sha512-0sj5XXt1ct+2wBdIbaKOx8oBhdqjH4dXBDmmPaMTHagvV0UcDi6AKW9M6bCDXoG0OtYjuVm02SpPhjzbB2Vdjw==
+  /gatsby-plugin-manifest/2.3.3_gatsby@2.20.7:
+    dependencies:
+      "@babel/runtime": 7.9.2
+      gatsby: 2.20.7_04c16baeea6b4a2704e625785aa0c1b4
+      gatsby-core-utils: 1.1.1
+      semver: 5.7.1
+      sharp: 0.25.2
+    dev: false
+    engines:
+      node: ">=10.13.0"
+    peerDependencies:
+      gatsby: ^2.4.0
+    resolution:
+      integrity: sha512-lEval/fZaCqu9qlQMY38A8fuoJOpWRih3Hh0sLfM2Bt1dPlVkjDQqpHbQCfEinQA41c6JUdFAQFhdp5+G0kOwQ==
   /gatsby-plugin-page-creator/2.2.1_gatsby@2.20.7:
     dependencies:
       "@babel/runtime": 7.9.2
@@ -13427,6 +13442,7 @@ specifiers:
   eslint-plugin-react-hooks: ^3.0.0
   gatsby: ^2.20.7
   gatsby-plugin-jss: ^2.2.1
+  gatsby-plugin-manifest: ^2.3.3
   gatsby-plugin-react-helmet: ^3.2.1
   gatsby-plugin-sharp: ^2.5.3
   gatsby-plugin-typography: ^2.4.1

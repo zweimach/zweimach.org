@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 export default function IndexPage() {
   const styles = createUseStyles({
@@ -40,6 +41,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <h1>zweimach</h1>
       <a href="https://github.com/zweimach">
         <img className={styles.profile} src={userImage} alt="zweimach" />

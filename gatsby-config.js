@@ -33,6 +33,19 @@ module.exports = {
         omitGoogleFont: true
       }
     },
-    "gatsby-plugin-jss"
+    "gatsby-plugin-jss",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "zweimach",
+        short_name: "zweimach",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#4d4d4d",
+        display: "standalone",
+        icon: "src/assets/icon.png",
+        theme_color_in_head: false
+      }
+    }
   ]
 };
