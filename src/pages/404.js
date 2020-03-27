@@ -7,11 +7,11 @@ import SEO from "../components/SEO";
 export default function NotFoundPage() {
   const styles = createUseStyles({
     title: {
-      fontSize: "3rem"
+      fontSize: "3rem",
     },
     subtitle: {
-      fontSize: "1.5rem"
-    }
+      fontSize: "1.5rem",
+    },
   })();
 
   return (

@@ -6,23 +6,23 @@ export default function Layout({ children }) {
   const styles = createUseStyles({
     "@global": {
       body: {
-        backgroundColor: "rgb(100, 100, 100)"
-      }
+        backgroundColor: "rgb(100, 100, 100)",
+      },
     },
-    "container": {
+    container: {
       height: "100vh",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       // alignContent: "center",
       flexDirection: "column",
-      color: "ghostwhite"
-    }
+      color: "ghostwhite",
+    },
   })();
 
   return <div className={styles.container}>{children}</div>;
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

@@ -9,7 +9,7 @@ const gatsbyNodeModules = path.resolve(
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [gatsbyNodeModules, "node_modules"]
-    }
+      modules: [gatsbyNodeModules, "node_modules"],
+    },
   });
 };

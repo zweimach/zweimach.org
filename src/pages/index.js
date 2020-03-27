@@ -11,24 +11,24 @@ export default function IndexPage() {
       backgroundColor: "rgb(50, 50, 50)",
       borderRadius: "16px",
       width: "256px",
-      height: "256px"
+      height: "256px",
     },
     box: {
       textAlign: "center",
       borderRadius: "16px",
       background: "rgb(50, 50, 50)",
       padding: "1rem 3rem",
-      margin: "1rem"
+      margin: "1rem",
     },
     text: {
-      margin: "0"
-    }
+      margin: "0",
+    },
   })();
 
   const {
     imageSharp: {
-      fixed: { src: userImage }
-    }
+      fixed: { src: userImage },
+    },
   } = useStaticQuery(graphql`
     {
       imageSharp(fixed: { originalName: { eq: "user.png" } }) {
