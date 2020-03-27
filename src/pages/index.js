@@ -1,11 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import userImage from "../assets/user.png";
 
 export default function IndexPage() {
-  const useStyles = createUseStyles({
+  const styles = createUseStyles({
     profile: {
       backgroundColor: "rgb(50, 50, 50)",
       borderRadius: "16px",
@@ -22,8 +22,21 @@ export default function IndexPage() {
     text: {
       margin: "0"
     }
-  });
-  const styles = useStyles();
+  })();
+
+  const {
+    imageSharp: {
+      fixed: { src: userImage }
+    }
+  } = useStaticQuery(graphql`
+    {
+      imageSharp(fixed: { originalName: { eq: "user.png" } }) {
+        fixed {
+          src
+        }
+      }
+    }
+  `);
 
   return (
     <Layout>

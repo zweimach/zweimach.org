@@ -5,7 +5,7 @@ import { createUseStyles } from "react-jss";
 import SEO from "./SEO";
 
 export default function Layout({ children }) {
-  const useStyles = createUseStyles({
+  const styles = createUseStyles({
     "@global": {
       body: {
         backgroundColor: "rgb(100, 100, 100)"
@@ -20,8 +20,7 @@ export default function Layout({ children }) {
       flexDirection: "column",
       color: "ghostwhite"
     }
-  });
-  const styles = useStyles();
+  })();
 
   return (
     <Fragment>

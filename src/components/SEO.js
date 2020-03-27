@@ -2,11 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import favicon from "../assets/favicon.png";
-
 export default function SEO() {
   const {
-    site: { siteMetadata: seo }
+    site: { siteMetadata: seo },
+    imageSharp: {
+      fixed: { src: favicon }
+    }
   } = useStaticQuery(graphql`
     {
       site {
@@ -17,6 +18,11 @@ export default function SEO() {
           author {
             name
           }
+        }
+      }
+      imageSharp(fixed: { originalName: { eq: "favicon.png" } }) {
+        fixed {
+          src
         }
       }
     }

@@ -1,5 +1,10 @@
-let gatsbyNodeModules = require("fs").realpathSync("node_modules/gatsby");
-gatsbyNodeModules = require("path").resolve(gatsbyNodeModules, "..");
+const fs = require("fs");
+const path = require("path");
+
+const gatsbyNodeModules = path.resolve(
+  fs.realpathSync("node_modules/gatsby"),
+  ".."
+);
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

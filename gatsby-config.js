@@ -9,6 +9,22 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/src/assets`
+      }
+    },
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 80
+      }
+    },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-typography",
