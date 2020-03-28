@@ -1,0 +1,17 @@
+@import "../styles/colors";
+
+:global body {
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+.container {
+  margin: auto;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 800px;
+  }
+}

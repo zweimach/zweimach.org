@@ -1,36 +1,9 @@
 import React from "react";
-import { createUseStyles } from "react-jss";
 import { Link } from "gatsby";
 
-export default function Header() {
-  const styles = createUseStyles({
-    header: {
-      display: "flex",
-      justifyContent: "space-evenly",
-      flexWrap: "wrap",
-      "& a": {
-        color: "inherit",
-        textDecoration: "none",
-      },
-    },
-    nav: {
-      display: "flex",
-      listStyle: "none",
-      justifyContent: "space-between",
-      margin: 0,
-      padding: "0.5rem 0rem",
-    },
-    navItem: {
-      margin: 0,
-      padding: "0 2rem",
-    },
-    title: {
-      margin: 0,
-      fontWeight: "bold",
-      padding: "0.5rem",
-    },
-  })();
+import styles from "./Header.module.scss";
 
+export default function Header() {
   return (
     <header className={styles.header}>
       <span className={styles.title}>

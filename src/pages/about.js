@@ -1,32 +1,11 @@
 import React from "react";
-import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
 
+import styles from "./about.module.scss";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
 export default function AboutPage() {
-  const styles = createUseStyles({
-    container: {
-      backgroundColor: "#32323",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      height: "calc(100vh - 200px)",
-      margin: 0,
-      textAlign: "center",
-    },
-    profile: {
-      backgroundColor: "#32323",
-      borderRadius: "50%",
-      margin: "0 auto",
-      display: "block",
-    },
-    text: {
-      margin: "0",
-    },
-  })();
-
   const {
     imageSharp: {
       fixed: { src: userImage },

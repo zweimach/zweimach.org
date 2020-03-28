@@ -33,7 +33,7 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
-    "gatsby-plugin-jss",
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
