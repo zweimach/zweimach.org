@@ -4,7 +4,7 @@ import { createUseStyles } from "react-jss";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-export default function NotFoundPage() {
+export default function BlogListPage() {
   const styles = createUseStyles({
     container: {
       height: "calc(100vh - 200px)",
@@ -24,10 +24,10 @@ export default function NotFoundPage() {
 
   return (
     <Layout>
-      <SEO title="404" />
+      <SEO title="Blog" />
       <div className={styles.container}>
-        <h1 className={styles.title}>404</h1>
-        <h2 className={styles.subtitle}>Not Found</h2>
+        <h1 className={styles.title}>501</h1>
+        <h2 className={styles.subtitle}>Not Implemented</h2>
       </div>
     </Layout>
   );
