@@ -2,25 +2,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import { createUseStyles } from "react-jss";
 
+import Header from "./Header";
+
 export default function Layout({ children }) {
   const styles = createUseStyles({
     "@global": {
       body: {
-        backgroundColor: "rgb(100, 100, 100)",
+        backgroundColor: "#646464",
+        color: "#f8f8ff",
       },
     },
     container: {
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      // alignContent: "center",
-      flexDirection: "column",
-      color: "ghostwhite",
+      margin: "auto",
+      minHeight: "100vh",
+    },
+    "@media screen and (min-width: 768px)": {
+      container: {
+        maxWidth: "800px",
+      },
     },
   })();
 
-  return <div className={styles.container}>{children}</div>;
+  return (
+    <div className={styles.container}>
+      <Header />
+      {children}
+    </div>
+  );
 }
 
 Layout.propTypes = {
