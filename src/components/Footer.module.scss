@@ -1,0 +1,43 @@
+@import "../styles/colors";
+
+.footer {
+  background: $secondary-color;
+  color: $text-color;
+  flex: 0 0 auto;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.contact-list {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.contact-item {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.25rem;
+  padding: 0;
+  width: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    padding: 1.5rem 0;
+  }
+}

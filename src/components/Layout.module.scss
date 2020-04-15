@@ -1,17 +1,32 @@
 @import "../styles/colors";
 
+:global html,
+:global body {
+  height: 100%;
+}
+
 :global body {
   background-color: $primary-color;
   color: $text-color;
+
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    height: 100%;
+  }
+
+  #gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.container {
+.main {
+  flex: 1 0 auto;
   margin: auto;
-  min-height: 100vh;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .main {
     max-width: 800px;
   }
 }

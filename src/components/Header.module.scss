@@ -1,7 +1,6 @@
 .header {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex: 0 0 auto;
+  max-height: 120px;
 
   a {
     color: inherit;
@@ -11,19 +10,43 @@
 
 .nav {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu-list {
+  display: flex;
+  flex: 1 0 auto;
   list-style: none;
   justify-content: space-between;
   margin: 0;
   padding: 0.5rem 0rem;
 }
 
-.nav-item {
+.menu-item {
   margin: 0;
   padding: 0 1.5rem;
 }
 
 .title {
+  flex: 1 0 auto;
   margin: 0;
   font-weight: bold;
   padding: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .menu-list {
+    flex: 0 0 auto;
+  }
+
+  .title {
+    flex: 0 0 auto;
+  }
 }

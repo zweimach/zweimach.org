@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./Layout.module.scss";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
+    <Fragment>
       <Header />
-      {children}
-    </div>
+      <main className={styles.main}>{children}</main>
+      <Footer />
+    </Fragment>
   );
 }
 
