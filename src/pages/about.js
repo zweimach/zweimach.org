@@ -12,7 +12,7 @@ export default function AboutPage() {
     },
   } = useStaticQuery(graphql`
     query {
-      imageSharp(fixed: { originalName: { eq: "user.png" } }) {
+      imageSharp(fixed: { originalName: { eq: "user.jpg" } }) {
         fixed {
           src
         }
@@ -23,7 +23,8 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO title="About" />
-      <div className={styles.container}>
+      <section className={styles.container}>
+        <h1>Hi! My name is Ananda Umamil</h1>
         <img
           className={styles.profile}
           src={userImage}
@@ -31,11 +32,17 @@ export default function AboutPage() {
           width="256px"
           height="256px"
         />
-        <p className={styles.text}>a sufferer of severe chrestomathy.</p>
-        <p className={styles.text}>
-          loves books, c language, linux, javascript and the web.
+        <p>
+          <strong>
+            I&apos;m a self-taught software engineer from Indonesia.
+          </strong>
         </p>
-      </div>
+        <p>
+          I have a passion for computer science and mathematics. I used to hate
+          math but then fell in love with it because of Haskell and functional
+          programming. I build web applications and text-processing tools.
+        </p>
+      </section>
     </Layout>
   );
 }
