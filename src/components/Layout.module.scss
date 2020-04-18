@@ -22,11 +22,11 @@
 
 .main {
   flex: 1 0 auto;
-  margin: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   .main {
-    max-width: 800px;
+    width: 768px;
   }
 }

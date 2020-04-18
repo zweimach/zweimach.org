@@ -49,9 +49,7 @@ export default function Footer() {
             </ContactBox>
           ))}
         </ul>
-        <div className={styles.copyrightText}>
-          Copyright &copy; 2020 &nbsp; Ananda Umamil
-        </div>
+        <span className={styles.footerText}>Copyright &copy; 2020</span>
       </div>
     </footer>
   );
