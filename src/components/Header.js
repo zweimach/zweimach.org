@@ -15,7 +15,7 @@ export default function Header() {
             <Link to="/blog">blog</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link to="/project">project</Link>
+            <Link to="/projects">projects</Link>
           </li>
           <li className={styles.menuItem}>
             <Link to="/about">about</Link>

@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="zweimach" />
     </Layout>
   );
 }

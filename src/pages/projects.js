@@ -7,7 +7,7 @@ import SEO from "../components/SEO";
 export default function ProjectListPage() {
   return (
     <Layout>
-      <SEO title="Project" />
+      <SEO title="zweimach's projects" />
       <div className={styles.container}>
         <h1 className={styles.title}>501</h1>
         <h2 className={styles.subtitle}>Not Implemented</h2>
