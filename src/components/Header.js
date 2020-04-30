@@ -1,25 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import styles from "./Header.module.scss";
-
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
-        <span className={styles.title}>
+    <header className="flex-none">
+      <nav className="md:max-w-screen-md h-full md:mx-auto flex justify-between flex-wrap">
+        <span className="flex-1 py-2 px-6 text-center sm:text-left font-bold">
           <Link to="/">zweimach</Link>
         </span>
-        <ul className={styles.menuList}>
-          <li className={styles.menuItem}>
-            <Link to="/blog">blog</Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link to="/projects">projects</Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link to="/about">about</Link>
-          </li>
+        <ul className="flex flex-1 justify-between py-2">
+          {["blog", "projects", "about"].map((item) => (
+            <li key={item} className="px-6">
+              <Link to={`/${item}`}>{item}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

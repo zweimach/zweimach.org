@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import styles from "./about.module.scss";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
@@ -23,10 +22,12 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO title="Hi! My name is Umam" />
-      <section className={styles.container}>
-        <h1>Hi! My name is Ananda Umamil</h1>
+      <div className="flex flex-col justify-evenly h-full p-4">
+        <h1 className="py-2 text-2xl font-bold text-center">
+          Hi! My name is Ananda Umamil
+        </h1>
         <img
-          className={styles.profile}
+          className="block rounded-full my-4 mx-auto"
           src={userImage}
           alt="zweimach"
           width="256px"
@@ -45,7 +46,7 @@ export default function AboutPage() {
             tools.
           </p>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 }

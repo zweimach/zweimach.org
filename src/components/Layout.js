@@ -1,17 +1,16 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./Layout.module.scss";
 import Header from "./Header";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <Fragment>
+    <div className="antialiased flex flex-col h-full bg-gray-200 text-gray-900 text-xl">
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className="md:max-w-screen-md md:mx-auto flex-1">{children}</main>
       <Footer />
-    </Fragment>
+    </div>
   );
 }
 

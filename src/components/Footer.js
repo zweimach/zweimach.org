@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {
   RiTwitterLine,
   RiLinkedinBoxLine,
@@ -7,8 +6,6 @@ import {
   RiGitlabLine,
   RiMailLine,
 } from "react-icons/ri";
-
-import styles from "./Footer.module.scss";
 
 const contactList = [
   {
@@ -40,33 +37,24 @@ const contactList = [
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <ul className={styles.contactList}>
+    <footer className="flex-none py-2 md:py-5 md:px-4 bg-gray-500 text-center">
+      <div className="md:flex md:flex-row-reverse md:items-center md:justify-between max-w-screen-md mx-auto">
+        <ul className="text-lg">
           {contactList.map(({ href, title, icon }) => (
-            <ContactBox key={title} href={href} title={title}>
-              {icon}
-            </ContactBox>
+            <li key={title} className="inline-block mx-1 w-8">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href={href}
+                title={title}
+              >
+                {icon}
+              </a>
+            </li>
           ))}
         </ul>
-        <span className={styles.footerText}>Copyright &copy; 2020</span>
+        <span className="text-base">Copyright &copy; 2020</span>
       </div>
     </footer>
   );
 }
-
-function ContactBox({ href, title, children }) {
-  return (
-    <li className={styles.contactItem}>
-      <a rel="noopener noreferrer" target="_blank" href={href} title={title}>
-        {children}
-      </a>
-    </li>
-  );
-}
-
-ContactBox.propTypes = {
-  href: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
-};

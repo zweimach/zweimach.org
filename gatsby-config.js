@@ -26,14 +26,7 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-typography",
-      options: {
-        pathToConfigModule: "src/utils/typography",
-        omitGoogleFont: true,
-      },
-    },
-    "gatsby-plugin-sass",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
