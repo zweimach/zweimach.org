@@ -37,7 +37,7 @@ const contactList = [
 
 export default function Footer() {
   return (
-    <footer className="flex-none py-2 md:py-5 md:px-4 bg-gray-500 text-center">
+    <footer className="flex-none py-2 md:py-5 md:px-4 bg-gray-400 text-center">
       <div className="md:flex md:flex-row-reverse md:items-center md:justify-between max-w-screen-md mx-auto">
         <ul className="text-lg">
           {contactList.map(({ href, title, icon }) => (

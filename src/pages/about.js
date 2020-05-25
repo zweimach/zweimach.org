@@ -1,19 +1,18 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export default function AboutPage() {
   const {
-    imageSharp: {
-      fixed: { src: userImage },
-    },
+    imageSharp: { fixed: userImage },
   } = useStaticQuery(graphql`
     query {
       imageSharp(fixed: { originalName: { eq: "user.jpg" } }) {
-        fixed {
-          src
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
@@ -26,12 +25,10 @@ export default function AboutPage() {
         <h1 className="py-2 text-2xl font-bold text-center">
           Hi! My name is Ananda Umamil
         </h1>
-        <img
+        <Img
           className="block rounded-full my-4 mx-auto"
-          src={userImage}
+          fixed={userImage}
           alt="zweimach"
-          width="256px"
-          height="256px"
         />
         <div>
           <p>
