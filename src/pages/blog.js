@@ -7,9 +7,9 @@ export default function BlogListPage() {
   return (
     <Layout>
       <SEO title="zweimach's blog" />
-      <div className="h-full w-full flex justify-center items-center flex-col py-12 px-4">
-        <h1 className="text-5xl">501</h1>
-        <h2 className="text-2xl">Not Implemented</h2>
+      <div className="h-full text-center">
+        <h1 className="my-3 sm:mt-4 sm:mb-8 font-serif text-5xl">Blog</h1>
+        <h2 className="text-2xl">No post yet.</h2>
       </div>
     </Layout>
   );

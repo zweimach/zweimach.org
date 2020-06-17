@@ -29,6 +29,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "tailwindcss": "^1.4.6",
+    "typeface-bitter": "0.0.71",
+    "typeface-fira-code": "^1.1.4",
     "typeface-lato": "^0.0.75"
   },
   "devDependencies": {

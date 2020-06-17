@@ -3,17 +3,27 @@ import { Link } from "gatsby";
 
 export default function Header() {
   return (
-    <header className="flex-none">
-      <nav className="md:max-w-screen-md h-full md:mx-auto flex justify-between flex-wrap text-lg">
-        <span className="flex-1 py-2 px-6 text-center sm:text-left font-bold">
+    <header className="flex-none mt-4 mb-6 md:my-8 text-base sm:text-xl">
+      <nav className="sm:max-w-screen-lg sm:mx-auto flex justify-between">
+        <span className="ml-6 font-bold hover:text-gray-600">
           <Link to="/">zweimach</Link>
         </span>
-        <ul className="flex flex-1 justify-between py-2">
-          {["blog", "projects", "about"].map((item) => (
-            <li key={item} className="px-6">
+        <ul className="flex">
+          {["about", "blog"].map((item) => (
+            <li key={item} className="mr-6 hover:text-gray-600">
               <Link to={`/${item}`}>{item}</Link>
             </li>
           ))}
+          <li className="mr-6 hover:text-gray-600">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/zweimach"
+              title="projects"
+            >
+              projects
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

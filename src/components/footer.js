@@ -37,11 +37,11 @@ const contactList = [
 
 export default function Footer() {
   return (
-    <footer className="flex-none py-2 md:py-5 md:px-4 bg-gray-400 text-center">
-      <div className="md:flex md:flex-row-reverse md:items-center md:justify-between max-w-screen-md mx-auto">
-        <ul className="text-lg">
+    <footer className="flex-none text-center">
+      <div className="sm:max-w-screen-lg sm:mx-auto my-2 sm:my-5 md:my-8 sm:flex sm:flex-row-reverse sm:items-center sm:justify-between">
+        <ul className="sm:mr-6 flex justify-center text-lg">
           {contactList.map(({ href, title, icon }) => (
-            <li key={title} className="inline-block mx-1 w-8">
+            <li key={title} className="mx-3 hover:text-gray-600">
               <a
                 rel="noopener noreferrer"
                 target="_blank"
@@ -53,7 +53,9 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-        <span className="text-base">Copyright &copy; 2020</span>
+        <span className="sm:ml-6 text-sm sm:text-base">
+          Copyright &copy; 2020
+        </span>
       </div>
     </footer>
   );

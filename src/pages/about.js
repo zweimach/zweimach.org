@@ -20,28 +20,31 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <SEO title="Hi! My name is Umam" />
-      <div className="flex flex-col justify-evenly h-full p-4">
-        <h1 className="py-2 text-2xl font-bold text-center">
-          Hi! My name is Ananda Umamil
+      <SEO title="about zweimach" />
+      <div className="h-full mx-6">
+        <h1 className="my-3 sm:mt-4 sm:mt-8 font-serif text-5xl text-center">
+          About
         </h1>
-        <Img
-          className="block rounded-full my-4 mx-auto"
-          fixed={userImage}
-          alt="zweimach"
-        />
-        <div>
-          <p>
-            <strong>
-              I&apos;m a self-taught software engineer from Indonesia.
-            </strong>
-          </p>
-          <p>
-            I have a passion for computer science and mathematics. I used to
-            hate math but then fell in love with it because of Haskell and
-            functional programming. I build web applications and text-processing
-            tools.
-          </p>
+        <div className="flex justify-center mb-6 sm:mb-12">
+          <Img className="rounded-full" fixed={userImage} alt="zweimach" />
+        </div>
+        <div className="my-6 mb-12 flex flex-col sm:flex-row">
+          <div className="mb-6 pt-1 sm:mr-6 sm:w-32 border-t-4 border-blue-600">
+            <p className="uppercase">bio</p>
+          </div>
+          <div className="flex-1">
+            <p>
+              <strong>
+                I&apos;m a self-taught software engineer from Indonesia.
+              </strong>
+            </p>
+            <p>
+              I have a passion for computer science and mathematics. I used to
+              hate math but then fell in love with it because of Haskell and
+              functional programming. I build web applications and
+              text-processing tools.
+            </p>
+          </div>
         </div>
       </div>
     </Layout>
