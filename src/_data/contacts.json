@@ -1,0 +1,27 @@
+[
+  {
+    "href": "https://github.com/zweimach",
+    "title": "GitHub",
+    "icon": "/src/assets/images/icons/github-line.svg"
+  },
+  {
+    "href": "https://gitlab.com/zweimach",
+    "title": "GitLab",
+    "icon": "/src/assets/images/icons/gitlab-line.svg"
+  },
+  {
+    "href": "https://www.linkedin.com/in/zweimach",
+    "title": "LinkedIn",
+    "icon": "/src/assets/images/icons/linkedin-box-line.svg"
+  },
+  {
+    "href": "https://twitter.com/zweimach",
+    "title": "Twitter",
+    "icon": "/src/assets/images/icons/twitter-line.svg"
+  },
+  {
+    "href": "mailto:zweimach@zweimach.org",
+    "title": "Email",
+    "icon": "/src/assets/images/icons/mail-line.svg"
+  }
+]

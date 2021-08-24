@@ -1,0 +1,23 @@
+[build]
+command = "npm run build"
+publish = "build"
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "no-referrer-when-downgrade"
+
+[[redirects]]
+from = "https://zweimach.netlify.com/*"
+to = "https://zweimach.org/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "*"
+to = "/404"
+status = 404

@@ -1,0 +1,65 @@
+{
+  "contacts": [
+    {
+      "href": "mailto:zweimach@zweimach.org",
+      "title": "zweimach@zweimach.org",
+      "icon": "/src/assets/images/icons/mail-line.svg"
+    },
+    {
+      "href": "https://github.com/zweimach",
+      "title": "zweimach",
+      "icon": "/src/assets/images/icons/github-line.svg"
+    },
+    {
+      "href": "https://www.linkedin.com/in/zweimach",
+      "title": "zweimach",
+      "icon": "/src/assets/images/icons/linkedin-box-line.svg"
+    },
+    {
+      "href": "https://twitter.com/zweimach",
+      "title": "@zweimach",
+      "icon": "/src/assets/images/icons/twitter-line.svg"
+    },
+    {
+      "href": "tel:+6281330238124",
+      "title": "+6281330238124",
+      "icon": "/src/assets/images/icons/phone-line.svg"
+    }
+  ],
+  "education": [
+    {
+      "school": "Politeknik Keuangan Negara STAN",
+      "date": "Aug 2016 - Sep 2017",
+      "degree": "Associate's degree",
+      "major": "Taxation"
+    }
+  ],
+  "work": [
+    {
+      "company": "Infra Digital Nusantara",
+      "date": "Dec 2020 - Now",
+      "details": [
+        "Develop backend services and APIs using Go",
+        "Develop a new web app with React.js and TypeScript",
+        "Create automated unit and end-to-end tests for our frontend app"
+      ],
+      "position": "Software Engineer"
+    },
+    {
+      "company": "Direktorat Jenderal Pajak Republik Indonesia",
+      "date": "Dec 2017 - Sep 2020",
+      "details": [
+        "Preparing tax-related documents and letters",
+        "Processing tax data with a spreadsheet application",
+        "Serving new NPWP applications and yearly tax reports",
+        "Conducting consultation for yearly tax report"
+      ],
+      "position": "Administrative Assistant"
+    }
+  ],
+  "skills": [
+    ["Haskell", "Rust", "C/C++", "Go"],
+    ["HTML & CSS", "JavaScript/Node.js", "React & Vue", "TypeScript/Flow"],
+    ["MySQL/PostgreSQL", "Version Control (Git)", "Docker", "Linux"]
+  ]
+}

@@ -1,0 +1,26 @@
+{%- set absolutePageUrl -%} {{ page.url | url | absoluteUrl(meta.url) }} {%- endset -%}
+<meta name="description" content="{{ description or meta.description }}" />
+<link rel="canonical" href="{{ absolutePageUrl }}" />
+
+<meta property="og:site_name" content="{{ meta.title }}" />
+<meta property="og:title" content="{{ title or meta.title }}" />
+<meta property="og:description" content="{{ description  or meta.description }}" />
+<meta property="og:url" content="{{ absolutePageUrl }}" />
+<meta property="og:locale" content="{{ meta.locale }}" />
+<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}" />
+
+{%- if image -%}
+<meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}" />
+{%- endif -%}
+
+<link rel="apple-touch-icon" sizes="192x192" href="{{ '/assets/images/favicon/icon-192x192.png' | url }}" />
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/icon-32x32.png' | url }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon/icon-16x16.png' | url }}" sizes="16x16" />
+<link
+  rel="shortcut icon"
+  type="image/png"
+  href="{{ '/assets/images/favicon/icon-256x256.png' | url }}"
+  sizes="256x256"
+/>
+<link rel="manifest" href="{{ '/manifest.webmanifest' | url }}" />
+<meta name="theme-color" content="#1a1a1a" />

@@ -4,56 +4,70 @@
   "description": "Personal website and blog of Ananda Umamil",
   "version": "1.0.0",
   "license": "MIT",
+  "author": {
+    "email": "zweimach@zweimach.org",
+    "name": "Ananda Umamil"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zweimach/zweimach.org"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve"
+    "start": "run-s build:dev",
+    "build": "run-s clean build:prod",
+    "build:dev": "eleventy --serve",
+    "build:prod": "eleventy",
+    "clean": "trash build",
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.0",
-    "gatsby": "^2.23.3",
-    "gatsby-image": "^2.4.7",
-    "gatsby-plugin-manifest": "^2.4.11",
-    "gatsby-plugin-postcss": "^2.3.4",
-    "gatsby-plugin-react-helmet": "^3.3.4",
-    "gatsby-plugin-sharp": "^2.6.11",
-    "gatsby-source-filesystem": "^2.3.11",
-    "gatsby-transformer-sharp": "^2.5.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^3.10.0",
-    "tailwindcss": "^1.4.6",
-    "typeface-bitter": "0.0.71",
-    "typeface-fira-code": "^1.1.4",
-    "typeface-lato": "^0.0.75"
+    "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy-navigation": "0.3.2",
+    "@11ty/eleventy-plugin-rss": "1.1.1",
+    "eleventy-google-fonts": "^0.0.5",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "eleventy-plugin-tailwindcss": "^0.3.0",
+    "html-minifier": "4.0.0",
+    "markdown-it": "12.2.0",
+    "npm-run-all": "4.1.5",
+    "trash-cli": "4.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-import-resolver-node": "^0.3.3",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.4",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
-    "prettier": "^2.0.5"
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2",
+    "simple-git-hooks": "^2.6.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "prettier": {},
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2015,
+      "sourceType": "script"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "overrides": [
+      {
+        "files": "src/assets/scripts/**/*.js",
+        "env": {
+          "node": false,
+          "browser": true
+        }
+      }
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,md,yml,yaml,css}": [
+    "*.{js,json,md,yml,yaml,html,css}": [
       "prettier --write"
     ],
     "*.js": [

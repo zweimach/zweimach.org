@@ -1,0 +1,89 @@
+---
+layout: empty
+eleventyExcludeFromCollections: true
+title: zweimach's resume
+---
+
+<main class="max-w-screen-lg mx-auto my-6 p-6 bg-white">
+  <div class="flex mb-2">
+    <div class="flex-1 p-4">
+      <h1 class="font-serif text-4xl leading-tight">Ananda Umamil</h1>
+      <h2 class="text-2xl leading-tight">Software Engineer</h2>
+      <p class="py-4">
+        I'm a self-taught software engineer from Indonesia. I have a passion for computer science and programming. I
+        love tinkering with text-processing tools like compilers and pretty printers. I'm also an avid functional
+        programmer and an occasional open source contributor.
+      </p>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Contact</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="flex flex-wrap">
+        {% for contact in resume.contacts %}
+        <li class="py-0.5 px-5 hover:text-gray-600">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="{{ contact.href }}"
+            class="flex items-center justify-center"
+          >
+            {{ contact.icon | svgContents | safe }}&nbsp;<span>{{ contact.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Experience</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="">
+        {% for work in resume.work %}
+        <li class="pb-4">
+          <div class="flex justify-between">
+            <div class="font-bold">{{ work.company }}</div>
+            <div>{{ work.date }}</div>
+          </div>
+          <div>{{ work.position }}</div>
+          <div class="text-base p-2">
+            <ul class="list-disc list-inside">
+              {% for item in work.details %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Education</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="">
+        {% for education in resume.education %}
+        <li class="pb-4">
+          <div class="flex justify-between">
+            <div class="font-bold">{{ education.school }}</div>
+            <div>{{ education.date }}</div>
+          </div>
+          <div>{{ education.degree }} | {{ education.major }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Skills</div>
+    <div class="flex-1 pt-5 px-4 grid grid-cols-3 text-lg">
+      {% for skillset in resume.skills %}
+      <ul class="list-disc list-inside">
+        {% for skill in skillset %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+</main>

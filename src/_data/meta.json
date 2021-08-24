@@ -1,0 +1,11 @@
+{
+  "title": "zweimach",
+  "description": "Personal website and blog of Ananda Umamil",
+  "url": "https://zweimach.org",
+  "lang": "en",
+  "locale": "en_us",
+  "author": {
+    "name": "zweimach",
+    "email": "zweimach@zweimach.org"
+  }
+}

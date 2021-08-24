@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "meta.html" %}
+    <title>{{ title or meta.title }}</title>
+
+    {% eleventyGoogleFonts
+    'https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Lato:wght@300;400;700&display=swap' %}
+    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}" />
+  </head>
+  <body class="antialiased flex flex-col h-full bg-white text-gray-800 text-lg md:text-xl">
+    {% include "header.html" %}
+    <main class="w-full sm:max-w-screen-lg sm:mx-auto flex-1">{{ content | safe }}</main>
+    {% include "footer.html" %}
+
+    <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
+  </body>
+</html>
