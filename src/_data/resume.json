@@ -36,8 +36,19 @@
   ],
   "work": [
     {
+      "company": "OnlinePajak",
+      "date": "Sep 2021 - Now",
+      "details": [
+        "Develop backend services and APIs using TypeScript and NestJS",
+        "Develop features customized for specific clients",
+        "Create automated unit tests for our OpenAPI services",
+        "Create automation and tools for our internal users"
+      ],
+      "position": "Software Engineer"
+    },
+    {
       "company": "Infra Digital Nusantara",
-      "date": "Dec 2020 - Now",
+      "date": "Dec 2020 - Aug 2021",
       "details": [
         "Develop backend services and APIs using Go",
         "Develop a new web app with React.js and TypeScript",
@@ -49,10 +60,10 @@
       "company": "Direktorat Jenderal Pajak Republik Indonesia",
       "date": "Dec 2017 - Sep 2020",
       "details": [
-        "Preparing tax-related documents and letters",
-        "Processing tax data with a spreadsheet application",
-        "Serving new NPWP applications and yearly tax reports",
-        "Conducting consultation for yearly tax report"
+        "Prepare tax-related documents and letters",
+        "Assist Account Representatives in managing tax data",
+        "Process new NPWP applications and yearly tax reports",
+        "Give consultation for yearly tax reports"
       ],
       "position": "Administrative Assistant"
     }

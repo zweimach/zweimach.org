@@ -1,7 +1,7 @@
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginTailwindCSS = require("eleventy-plugin-tailwindcss");
+const pluginPostCSS = require("eleventy-plugin-postcss");
 const pluginGoogleFonts = require("eleventy-google-fonts");
 const pluginSvgContents = require("eleventy-plugin-svg-contents");
 const markdownIt = require("markdown-it");
@@ -10,9 +10,7 @@ const htmlmin = require("html-minifier");
 module.exports = function (config) {
   config.addPlugin(pluginRss);
   config.addPlugin(pluginNavigation);
-  config.addPlugin(pluginTailwindCSS, {
-    watchEleventyWatchTargets: true,
-  });
+  config.addPlugin(pluginPostCSS);
   config.addPlugin(pluginGoogleFonts);
   config.addPlugin(pluginSvgContents);
 

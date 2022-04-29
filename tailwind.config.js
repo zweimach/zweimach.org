@@ -1,14 +1,15 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  mode: "jit",
-  purge: ["src/**/*.html"],
+  content: ["src/**/*.html"],
   theme: {
-    extend: {},
-    fontFamily: {
-      sans: ["Lato", "Roboto", "Noto Sans", "Noto Color Emoji", "sans-serif"],
-      serif: ["Bitter", "Georgia", "Cambria", '"Times New Roman"', "serif"],
-      mono: ['"Fira Code"', "Menlo", "Monaco", "Consolas", "monospace"],
+    extend: {
+      fontFamily: {
+        sans: ["Lato", defaultTheme.fontFamily.sans],
+        serif: ["Bitter", defaultTheme.fontFamily.serif],
+        mono: ['"Fira Code"', defaultTheme.fontFamily.mono],
+      },
     },
   },
-  variants: {},
   plugins: [],
 };
