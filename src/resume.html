@@ -4,8 +4,8 @@ eleventyExcludeFromCollections: true
 title: zweimach's resume
 ---
 
-<main class="max-w-screen-lg mx-auto my-6 p-6 bg-white">
-  <div class="flex mb-2">
+<main class="mx-auto my-6 max-w-screen-lg bg-white p-6">
+  <div class="mb-2 flex">
     <div class="flex-1 p-4">
       <h1 class="font-serif text-4xl leading-tight">Ananda Umamil</h1>
       <h2 class="text-2xl leading-tight">Software Engineer</h2>
@@ -16,9 +16,9 @@ title: zweimach's resume
       </p>
     </div>
   </div>
-  <div class="flex mb-8">
-    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Contact</div>
-    <div class="flex-1 pt-5 px-4">
+  <div class="mb-8 flex">
+    <div class="ml-4 w-40 flex-none border-t-4 border-gray-400 pt-4">Contact</div>
+    <div class="flex-1 px-4 pt-5">
       <ul class="flex flex-wrap">
         {% for contact in resume.contacts %}
         <li class="py-0.5 px-5 hover:text-gray-600">
@@ -35,9 +35,9 @@ title: zweimach's resume
       </ul>
     </div>
   </div>
-  <div class="flex mb-8">
-    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Experience</div>
-    <div class="flex-1 pt-5 px-4">
+  <div class="mb-8 flex">
+    <div class="ml-4 w-40 flex-none border-t-4 border-gray-400 pt-4">Experience</div>
+    <div class="flex-1 px-4 pt-5">
       <ul class="">
         {% for work in resume.work %}
         <li class="pb-4">
@@ -46,8 +46,8 @@ title: zweimach's resume
             <div>{{ work.date }}</div>
           </div>
           <div>{{ work.position }}</div>
-          <div class="text-base p-2">
-            <ul class="list-disc list-inside">
+          <div class="p-2 text-base">
+            <ul class="list-inside list-disc">
               {% for item in work.details %}
               <li>{{ item }}</li>
               {% endfor %}
@@ -58,9 +58,9 @@ title: zweimach's resume
       </ul>
     </div>
   </div>
-  <div class="flex mb-8">
-    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Education</div>
-    <div class="flex-1 pt-5 px-4">
+  <div class="mb-8 flex">
+    <div class="ml-4 w-40 flex-none border-t-4 border-gray-400 pt-4">Education</div>
+    <div class="flex-1 px-4 pt-5">
       <ul class="">
         {% for education in resume.education %}
         <li class="pb-4">
@@ -74,11 +74,11 @@ title: zweimach's resume
       </ul>
     </div>
   </div>
-  <div class="flex mb-8">
-    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Skills</div>
-    <div class="flex-1 pt-5 px-4 grid grid-cols-3 text-lg">
+  <div class="mb-8 flex">
+    <div class="ml-4 w-40 flex-none border-t-4 border-gray-400 pt-4">Skills</div>
+    <div class="grid flex-1 grid-cols-3 px-4 pt-5 text-lg">
       {% for skillset in resume.skills %}
-      <ul class="list-disc list-inside">
+      <ul class="list-inside list-disc">
         {% for skill in skillset %}
         <li>{{ skill }}</li>
         {% endfor %}

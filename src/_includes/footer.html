@@ -1,14 +1,8 @@
 <footer class="flex-none text-center">
   <div
-    class="
-      sm:max-w-screen-lg sm:mx-auto
-      my-2
-      sm:my-5
-      md:my-8
-      sm:flex sm:flex-row-reverse sm:items-center sm:justify-between
-    "
+    class="my-2 sm:mx-auto sm:my-5 sm:flex sm:max-w-screen-lg sm:flex-row-reverse sm:items-center sm:justify-between md:my-8"
   >
-    <ul class="sm:mr-6 flex justify-center text-lg">
+    <ul class="flex justify-center text-lg sm:mr-6">
       {% for contact in contacts %}
       <li class="mx-3 hover:text-gray-600">
         <a rel="noopener noreferrer" target="_blank" href="{{ contact.href }}" title="{{ contact.title }}">
@@ -17,6 +11,6 @@
       </li>
       {% endfor %}
     </ul>
-    <span class="sm:ml-6 text-sm sm:text-base">Copyright &copy; 2020</span>
+    <span class="text-sm sm:ml-6 sm:text-base">Copyright &copy; 2020</span>
   </div>
 </footer>

@@ -10,9 +10,9 @@
     'https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Lato:wght@300;400;700&display=swap' %}
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}" />
   </head>
-  <body class="antialiased flex flex-col h-full bg-white text-gray-800 text-lg md:text-xl">
+  <body class="flex h-full flex-col bg-white text-lg text-gray-800 antialiased md:text-xl">
     {% include "header.html" %}
-    <main class="w-full sm:max-w-screen-lg sm:mx-auto flex-1">{{ content | safe }}</main>
+    <main class="w-full flex-1 sm:mx-auto sm:max-w-screen-lg">{{ content | safe }}</main>
     {% include "footer.html" %}
 
     <script type="text/javascript" src="{{ '/assets/scripts/main.js' | url }}"></script>
