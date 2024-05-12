@@ -3,27 +3,27 @@
     {
       "href": "mailto:zweimach@zweimach.org",
       "title": "zweimach@zweimach.org",
-      "icon": "/src/assets/images/icons/mail-line.svg"
+      "icon": "/assets/images/icons/mail-line.svg"
     },
     {
       "href": "https://github.com/zweimach",
       "title": "zweimach",
-      "icon": "/src/assets/images/icons/github-line.svg"
+      "icon": "/assets/images/icons/github-line.svg"
     },
     {
       "href": "https://www.linkedin.com/in/zweimach",
       "title": "zweimach",
-      "icon": "/src/assets/images/icons/linkedin-box-line.svg"
+      "icon": "/assets/images/icons/linkedin-box-line.svg"
     },
     {
       "href": "https://twitter.com/zweimach",
       "title": "@zweimach",
-      "icon": "/src/assets/images/icons/twitter-line.svg"
+      "icon": "/assets/images/icons/twitter-line.svg"
     },
     {
       "href": "tel:+6281330238124",
       "title": "+6281330238124",
-      "icon": "/src/assets/images/icons/phone-line.svg"
+      "icon": "/assets/images/icons/phone-line.svg"
     }
   ],
   "education": [

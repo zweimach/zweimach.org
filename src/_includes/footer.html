@@ -5,8 +5,9 @@
     <ul class="flex justify-center text-lg sm:mr-6">
       {% for contact in contacts %}
       <li class="mx-3 hover:text-gray-600">
+        {% set icon = contact.icon | sourceUrl %}
         <a rel="noopener noreferrer" target="_blank" href="{{ contact.href }}" title="{{ contact.title }}">
-          {{ contact.icon | svgContents | safe }}
+          {% svgContents icon %}
         </a>
       </li>
       {% endfor %}

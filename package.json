@@ -4,6 +4,7 @@
   "description": "Personal website and blog of Ananda Umamil",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "author": {
     "email": "zweimach@zweimach.org",
     "name": "Ananda Umamil"
@@ -13,36 +14,29 @@
     "url": "https://github.com/zweimach/zweimach.org"
   },
   "scripts": {
-    "start": "run-s build:dev",
-    "build": "run-s clean build:prod",
-    "build:dev": "eleventy --serve",
-    "build:prod": "eleventy",
-    "clean": "del-cli build",
+    "dev": "eleventy --serve",
+    "build": "eleventy",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-navigation": "^0.3.2",
-    "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "autoprefixer": "^10.4.5",
-    "del-cli": "^4.0.1",
-    "eleventy-google-fonts": "^0.0.5",
-    "eleventy-plugin-postcss": "^1.0.4",
-    "eleventy-plugin-svg-contents": "^0.7.0",
-    "html-minifier": "^4.0.0",
-    "markdown-it": "^13.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.13",
-    "tailwindcss": "^3.0.24"
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "autoprefixer": "^10.4.19",
+    "htmlnano": "^2.1.1",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "eslint": "^8.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.10",
-    "simple-git-hooks": "^2.7.0"
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "simple-git-hooks": "^2.11.1"
   },
   "prettier": {
     "plugins": [
@@ -54,8 +48,8 @@
       "node": true
     },
     "parserOptions": {
-      "ecmaVersion": 2015,
-      "sourceType": "script"
+      "ecmaVersion": 2021,
+      "sourceType": "module"
     },
     "extends": [
       "eslint:recommended",
