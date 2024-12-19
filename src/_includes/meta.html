@@ -1,5 +1,6 @@
 {%- set absolutePageUrl -%} {{ page.url | url | absoluteUrl(meta.url) }} {%- endset -%}
 <meta name="description" content="{{ description or meta.description }}" />
+<meta name="generator" content="{{ eleventy.generator }}" />
 <link rel="canonical" href="{{ absolutePageUrl }}" />
 
 <meta property="og:site_name" content="{{ meta.title }}" />

@@ -1,22 +1,22 @@
-const path = require("node:path");
-const pluginHtmlBase = require("@11ty/eleventy").EleventyHtmlBasePlugin;
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginVite = require("@11ty/eleventy-plugin-vite");
-const Image = require("@11ty/eleventy-img");
-const htmlnano = require("htmlnano");
+import * as path from "node:path";
+import { EleventyHtmlBasePlugin as pluginHtmlBase } from "@11ty/eleventy";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import { absoluteUrl } from "@11ty/eleventy-plugin-rss";
+import pluginVite from "@11ty/eleventy-plugin-vite";
+import Image from "@11ty/eleventy-img";
+import htmlnano from "htmlnano";
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} config
  */
-module.exports = function (config) {
+export default function (config) {
   config.addPlugin(pluginHtmlBase);
   config.addPlugin(pluginNavigation);
   config.addPlugin(pluginVite);
 
-  config.addNunjucksFilter("absoluteUrl", pluginRss.absoluteUrl);
+  config.addNunjucksFilter("absoluteUrl", absoluteUrl);
   config.addNunjucksFilter("sourceUrl", (url) =>
-    path.join(__dirname, "src", url),
+    path.join(import.meta.dirname, "src", url),
   );
 
   config.addNunjucksAsyncShortcode("svgContents", async (src) => {
@@ -63,4 +63,4 @@ module.exports = function (config) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
-};
+}
