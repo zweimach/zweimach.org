@@ -16,7 +16,7 @@
   </head>
   <body class="flex h-full flex-col bg-white text-lg text-gray-800 antialiased md:text-xl">
     {% include "header.html" %}
-    <main class="w-full flex-1 sm:mx-auto sm:max-w-screen-lg">{{ content | safe }}</main>
+    <main class="w-full flex-1 sm:mx-auto sm:max-w-(--breakpoint-lg)">{{ content | safe }}</main>
     {% include "footer.html" %}
 
     <script type="module" src="{{ '/assets/scripts/main.js' | url }}"></script>

@@ -1,3 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Lato;
+  --font-sans--0: ui-sans-serif;
+  --font-sans--1: system-ui;
+  --font-sans--2: sans-serif;
+  --font-sans--3: "Apple Color Emoji";
+  --font-sans--4: "Segoe UI Emoji";
+  --font-sans--5: "Segoe UI Symbol";
+  --font-sans--6: "Noto Color Emoji";
+  --font-sans--length: 7;
+  --font-serif: Bitter;
+  --font-serif--0: ui-serif;
+  --font-serif--1: Georgia;
+  --font-serif--2: Cambria;
+  --font-serif--3: "Times New Roman";
+  --font-serif--4: Times;
+  --font-serif--5: serif;
+  --font-serif--length: 6;
+  --font-mono: "Fira Code";
+  --font-mono--0: ui-monospace;
+  --font-mono--1: SFMono-Regular;
+  --font-mono--2: Menlo;
+  --font-mono--3: Monaco;
+  --font-mono--4: Consolas;
+  --font-mono--5: "Liberation Mono";
+  --font-mono--6: "Courier New";
+  --font-mono--7: monospace;
+  --font-mono--length: 8;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}

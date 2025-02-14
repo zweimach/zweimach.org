@@ -1,7 +1,6 @@
 import * as path from "node:path";
 import { EleventyHtmlBasePlugin as pluginHtmlBase } from "@11ty/eleventy";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { absoluteUrl } from "@11ty/eleventy-plugin-rss";
 import pluginVite from "@11ty/eleventy-plugin-vite";
 import Image from "@11ty/eleventy-img";
 import htmlnano from "htmlnano";
@@ -63,4 +62,16 @@ export default function (config) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
   };
+}
+
+/**
+ * @param {string} url
+ * @param {string} base
+ */
+function absoluteUrl(url, base) {
+  try {
+    return new URL(url, base).toString();
+  } catch {
+    return url;
+  }
 }
