@@ -2,7 +2,6 @@ import * as path from "node:path";
 import { EleventyHtmlBasePlugin as pluginHtmlBase } from "@11ty/eleventy";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import pluginVite from "@11ty/eleventy-plugin-vite";
-import Image from "@11ty/eleventy-img";
 import htmlnano from "htmlnano";
 
 /**
@@ -17,14 +16,6 @@ export default function (config) {
   config.addNunjucksFilter("sourceUrl", (url) =>
     path.join(import.meta.dirname, "src", url),
   );
-
-  config.addNunjucksAsyncShortcode("svgContents", async (src) => {
-    const metadata = await Image(src, {
-      formats: ["svg"],
-      dryRun: true,
-    });
-    return metadata.svg[0].buffer.toString("utf-8");
-  });
 
   config.addTransform("htmlnano", async function (content) {
     const { outputPath } = this.page;

@@ -22,14 +22,14 @@ title: zweimach's resume
       <ul class="flex flex-wrap">
         {% for contact in resume.contacts %}
         <li class="px-5 py-0.5 hover:text-gray-600">
-          {% set icon = contact.icon | sourceUrl %}
           <a
             rel="noopener noreferrer"
             target="_blank"
             href="{{ contact.href }}"
-            class="flex items-center justify-center"
+            class="flex items-center justify-center gap-1"
           >
-            {% svgContents icon %}&nbsp;<span>{{ contact.title }}</span>
+            <span class="iconify {{ contact.icon }}"></span>
+            <span>{{ contact.title }}</span>
           </a>
         </li>
         {% endfor %}

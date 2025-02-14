@@ -2,26 +2,26 @@
   {
     "href": "https://github.com/zweimach",
     "title": "GitHub",
-    "icon": "/assets/images/icons/github-line.svg"
+    "icon": "ri--github-line"
   },
   {
     "href": "https://gitlab.com/zweimach",
     "title": "GitLab",
-    "icon": "/assets/images/icons/gitlab-line.svg"
+    "icon": "ri--gitlab-line"
   },
   {
     "href": "https://www.linkedin.com/in/zweimach",
     "title": "LinkedIn",
-    "icon": "/assets/images/icons/linkedin-box-line.svg"
+    "icon": "ri--linkedin-box-line"
   },
   {
     "href": "https://twitter.com/zweimach",
     "title": "Twitter",
-    "icon": "/assets/images/icons/twitter-line.svg"
+    "icon": "ri--twitter-line"
   },
   {
     "href": "mailto:zweimach@zweimach.org",
     "title": "Email",
-    "icon": "/assets/images/icons/mail-line.svg"
+    "icon": "ri--mail-line"
   }
 ]

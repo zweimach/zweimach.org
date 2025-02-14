@@ -20,9 +20,10 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-vite": "^6.0.0",
+    "@iconify-json/ri": "^1.2.5",
+    "@iconify/tailwind4": "^1.0.3",
     "@tailwindcss/postcss": "^4.0.6",
     "htmlnano": "^2.1.1",
     "postcss": "^8.5.2",

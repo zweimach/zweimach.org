@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@plugin "@iconify/tailwind4" {
+  prefix: iconify;
+  prefixes: ri;
+}
+
 @theme {
   --font-sans: Lato;
   --font-sans--0: ui-sans-serif;
