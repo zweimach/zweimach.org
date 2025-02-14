@@ -20,6 +20,11 @@
     "icon": "ri--twitter-line"
   },
   {
+    "href": "https://mastodon.social/@zweimach",
+    "title": "Mastodon",
+    "icon": "ri--mastodon-line"
+  },
+  {
     "href": "mailto:zweimach@zweimach.org",
     "title": "Email",
     "icon": "ri--mail-line"
