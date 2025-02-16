@@ -10,6 +10,10 @@
 <meta property="og:locale" content="{{ meta.locale }}" />
 <meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}" />
 
+{%- set contacts = meta.contacts -%}
+<meta name="fediverse:creator" content="{{ contacts.mastodon.href }}" />
+<link rel="me" href="{{ contacts.mastodon.href }}" />
+
 {%- if image -%}
 <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}" />
 {%- endif -%}
